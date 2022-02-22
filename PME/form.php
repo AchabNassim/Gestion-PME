@@ -1,6 +1,6 @@
 <?php
 	include "includes/bootstrap.php";
-	include 'includes/config.php';
+	include "includes/config.php";
 	$update = false;
 	$matricule = "";
 	$nom = "";
@@ -43,7 +43,7 @@
 		  	<?php
 		  	if($update === true): ?>
 		  		<label for="matricule">Matricule</label>
-		    	<input type="text" value="<?php echo $matricule;?>" class="form-control" id="matricule" name="matricule" disabled>
+		    	<input type="text" value="<?php echo $matricule;?>" class="form-control" id="matricule" name="matricule" readonly >
 		  	<?php else: ?> 
 		  		<label for="matricule">Matricule</label>
 		    	<input type="text" value="<?php echo $matricule;?>" class="form-control" id="matricule" name="matricule">
@@ -79,7 +79,7 @@
 		  </div>
 		  <div class="form-group">
 		  <?php if ($update == true): ?>
-				<button class="btn btn-primary" type="submit" name="update" >update</button>
+				<button class="btn btn-success" type="submit" name="update" >update</button>
 			<?php else: ?>
 				<button class="btn btn-primary"  type="submit" name="send" >send</button>	
 			<?php endif ?>

@@ -20,15 +20,20 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<div id="container">
 	<div class="searchContainer">
+		<div>
+			<a href="form.php" class="btn btn-primary">Ajouter un employé</a>
+		</div>
+		<div>
 		<form action="index.php" method="POST">
 			<input type="text" name="searchV" class="searchV" >
 			<input type="submit" name="search" value="search" class="btn btn-primary">
-			<a href="form.php" class="btn btn-primary">Ajouter un employé</a>
 		</form>
 	</div>
+	</div>
 <div id="table" class="container-sm">
-	<table class="table table-hover table-bordered">
+	<table class="table table-hover ">
 		<thead >
 			<tr>
 				<th>Matricule</th>
@@ -45,7 +50,6 @@
 		<tbody>
 
 		<?php while ($row = mysqli_fetch_assoc($result)): ?>
-
 	 		<tr>
 				<td><?php echo $row["matricule"]?></td>
 				<td><?php echo $row["nom"]?></td>
@@ -65,6 +69,7 @@
 ?>
 		</tbody>
 	</table>
+</div>
 </div>
 </body>
 </html>
