@@ -1,0 +1,10 @@
+input {
+	margin: 2px;
+}
+#form {
+	margin: 20px auto;
+}
+#save {
+	margin: 5px auto;
+	width: 10%;
+}
